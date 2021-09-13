@@ -1,6 +1,6 @@
 // 내 풀이
 function solution(n) {
-  const isPrime = (num) => {
+  const isPrime = (num) => { // 소수 판별 알고리즘
     if (num % 2 == 0) return (num == 2);
     var m = Math.sqrt(num);
     for (var i = 3; i <= m; i += 2) {
@@ -8,13 +8,10 @@ function solution(n) {
     }
     return true;
   };
-
   let result = 0;
-
   for (let i = 2; i <= n; i++) {
     if (isPrime(i)) ++result;
   }
-
   return result;
 }
 
